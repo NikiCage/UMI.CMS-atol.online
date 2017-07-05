@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<umidump version="2.0">
+    <directories>
+        <directory path="/classes/modules/" name="fx_atol">/classes/modules/</directory>
+    </directories>
+    <files>
+        <file name="widgets.png">/images/cms/admin/mac/icons/big/fx_atol.png</file>
+        <file name="widgets.png">/images/cms/admin/mac/icons/medium/fx_atol.png</file>
+        <file name="widgets.png">/images/cms/admin/mac/icons/small/fx_atol.png</file>
+        <file name="widgets.png">/images/cms/admin/modern/icon/fx_atol.png</file>
+
+        <file name="foxiAtol.php">/classes/modules/fx_atol/classes/foxiAtol.php</file>
+        <file name="SdkException.php">/classes/modules/fx_atol/classes/SdkException.php</file>
+
+        <file name="iClient.php">/classes/modules/fx_atol/classes/clients/iClient.php</file>
+        <file name="PostClient.php">/classes/modules/fx_atol/classes/clients/PostClient.php</file>
+
+        <file name="BaseDataObject.php">/classes/modules/fx_atol/classes/data_objects/BaseDataObject.php</file>
+        <file name="ReceiptPosition.php">/classes/modules/fx_atol/classes/data_objects/ReceiptPosition.php</file>
+
+        <file name="BaseServiceRequest.php">/classes/modules/fx_atol/classes/services/BaseServiceRequest.php</file>
+        <file name="BaseServiceResponse.php">/classes/modules/fx_atol/classes/services/BaseServiceResponse.php</file>
+        <file name="CreateDocumentRequest.php">/classes/modules/fx_atol/classes/services/CreateDocumentRequest.php</file>
+        <file name="CreateDocumentRequest.php">/classes/modules/fx_atol/classes/services/CreateDocumentRequest.php</file>
+        <file name="GetStatusRequest.php">/classes/modules/fx_atol/classes/services/GetStatusRequest.php</file>
+        <file name="GetStatusResponse.php">/classes/modules/fx_atol/classes/services/GetStatusResponse.php</file>
+        <file name="GetTokenRequest.php">/classes/modules/fx_atol/classes/services/GetTokenRequest.php</file>
+        <file name="GetTokenResponse.php">/classes/modules/fx_atol/classes/services/GetTokenResponse.php</file>
+
+        <file name="__admin.php">/classes/modules/fx_atol/__admin.php</file>
+        <file name="class.php">/classes/modules/fx_atol/class.php</file>
+        <file name="events.php">/classes/modules/fx_atol/events.php</file>
+        <file name="i18n.en.php">/classes/modules/fx_atol/i18n.en.php</file>
+        <file name="i18n.php">/classes/modules/fx_atol/i18n.php</file>
+        <file name="install.php">/classes/modules/fx_atol/install.php</file>
+        <file name="lang.en.php">/classes/modules/fx_atol/lang.en.php</file>
+        <file name="lang.php">/classes/modules/fx_atol/lang.php</file>
+        <file name="permissions.php">/classes/modules/fx_atol/permissions.php</file>
+    </files>
+</umidump>

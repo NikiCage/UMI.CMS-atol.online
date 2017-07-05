@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<umidump version="2.0">
+    <types>
+        <type id="root-guides-type" guid="root-guides-type" title="Справочники" parent-id="0" locked="locked"/>
+        <type id="emarket-tax" guid="emarket-tax" title="Тип НДС" parent-id="root-guides-type" guide="guide" public="public">
+            <base module="emarket" method="tax">Типы НДС</base>
+        </type>
+        <type id="catalog-object" guid="catalog-object" title="Объект каталога">
+            <fieldgroups>
+                <group name="atol" title="Свойства для кассы" visible="visible">
+                    <field name="atol_tax" title="Ставка НДС" visible="visible">
+                        <type name="Выпадающий список" data-type="relation"/>
+                    </field>
+                </group>
+            </fieldgroups>
+        </type>
+        <type id="emarket-order" guid="emarket-order" title="Заказ">
+            <fieldgroups>
+                <group name="order_props" title="Свойства заказа">
+                    <field name="uuid" title="Идентификатор чека" visible="visible">
+                        <type name="Строка" data-type="string"/>
+                    </field>
+                </group>
+            </fieldgroups>
+        </type>
+    </types>
+    <objects>
+        <object id="emarket-tax-none" guid="emarket-tax-none" type-id="emarket-tax" name="без НДС"/>
+        <object id="emarket-tax-vat0" guid="emarket-tax-vat0" type-id="emarket-tax" name="НДС по ставке 0%"/>
+        <object id="emarket-tax-vat10" guid="emarket-tax-vat10" type-id="emarket-tax" name="НДС чека по ставке 10%"/>
+        <object id="emarket-tax-vat18" guid="emarket-tax-vat18" type-id="emarket-tax" name="НДС чека по ставке 18%"/>
+        <object id="emarket-tax-vat110" guid="emarket-tax-vat110" type-id="emarket-tax" name="НДС чека по расчетной ставке 10/110"/>
+        <object id="emarket-tax-vat118" guid="emarket-tax-vat118" type-id="emarket-tax" name="НДС чека по расчетной ставке 18/118"/>
+    </objects>
+    <relations>
+        <relation type-id="catalog-object" field-name="atol_tax">
+            <guide id="emarket-tax"/>
+        </relation>
+    </relations>
+</umidump>

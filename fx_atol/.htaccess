@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$  install.php?mode=$1 [L,NE]
+</IfModule>
+
+<IfModule mod_env.c>
+SetEnv no-gzip
+</IfModule>
