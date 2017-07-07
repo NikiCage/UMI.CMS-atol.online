@@ -7,7 +7,7 @@ class fx_atol extends def_module {
             $this->__loadLib("__admin.php");
             $this->__implement("__fx_atol");
         }else{
-            objectProxyHelper::includeClass(__CLASS__.'/classes/', 'foxiAtol');
+            require_once "./classes/modules/fx_atol/classes/foxiAtol.php";
         }
 	}
     

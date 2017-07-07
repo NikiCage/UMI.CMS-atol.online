@@ -1,5 +1,5 @@
 <?php
-define('ATOL_LIB_PATH','fx_atol/classes/');
+define('ATOL_LIB_PATH','./classes/modules/fx_atol/classes/');
 interface iFoxiAtol {
     public function documentRequest(order $order);
 };
@@ -13,19 +13,19 @@ class foxiAtol extends singleton implements iFoxiAtol{
     }
 
     private static function include_lib(){
-        objectProxyHelper::includeClass(ATOL_LIB_PATH, 'SdkException');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'clients/', 'iClient');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'clients/', 'PostClient');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'data_objects/', 'BaseDataObject');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'data_objects/', 'ReceiptPosition');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'BaseServiceRequest');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'BaseServiceResponse');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'CreateDocumentRequest');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'CreateDocumentRequest');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'GetStatusRequest');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'GetStatusResponse');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'GetTokenRequest');
-        objectProxyHelper::includeClass(ATOL_LIB_PATH.'services/', 'GetTokenResponse');
+        require_once ATOL_LIB_PATH."SdkException.php";
+        require_once ATOL_LIB_PATH."clients/iClient.php";
+        require_once ATOL_LIB_PATH."clients/PostClient.php";
+        require_once ATOL_LIB_PATH."data_objects/BaseDataObject.php";
+        require_once ATOL_LIB_PATH."data_objects/ReceiptPosition.php";
+        require_once ATOL_LIB_PATH."services/BaseServiceRequest.php";
+        require_once ATOL_LIB_PATH."services/BaseServiceResponse.php";
+        require_once ATOL_LIB_PATH."services/CreateDocumentRequest.php";
+        require_once ATOL_LIB_PATH."services/CreateDocumentRequest.php";
+        require_once ATOL_LIB_PATH."services/GetStatusRequest.php";
+        require_once ATOL_LIB_PATH."services/GetStatusResponse.php";
+        require_once ATOL_LIB_PATH."services/GetTokenRequest.php";
+        require_once ATOL_LIB_PATH."services/GetTokenResponse.php";
     }
 
     private static function getToken($login, $password){
@@ -84,7 +84,7 @@ class foxiAtol extends singleton implements iFoxiAtol{
             ->addInn($inn)
             ->addExternalId($order->getId())
             ->addMerchantAddress($address)
-            ->addOperationType(Platron\Atol\services\CreateDocumentRequest::OPERATION_TYPE_BUY)
+            ->addOperationType(Platron\Atol\services\CreateDocumentRequest::OPERATION_TYPE_SELL)
             ->addPaymentType($payment_code)
             ->addSno($sno);
 

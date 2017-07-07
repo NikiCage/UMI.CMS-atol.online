@@ -1,16 +1,17 @@
 <?php
-
 class fx_atol extends def_module {
 
     public function __construct() {
         parent::__construct();
+        cmsController::getInstance()->getModule('emarket');
         if(cmsController::getInstance()->getCurrentMode() == "admin") {
             $this->__loadLib("admin.php");
             $this->__implement("FxAtolAdmin");
+
             $this->loadCommonExtension();
             $this->includeAdminClasses();
         }else{
-            objectProxyHelper::includeClass(__CLASS__.'/classes/', 'foxiAtol');
+            require_once "./classes/modules/fx_atol/classes/foxiAtol.php";
         }
         $this->loadTemplateCustoms();
         $this->loadAdminExtension();

@@ -206,7 +206,7 @@ class CreateDocumentRequest extends BaseServiceRequest{
         
         $params = [
             'timestamp' => date('d.m.Y H:i:s'),
-            'external_id' => $this->externalId,
+            'external_id' => "$this->externalId",
             'service' => [
                 'inn' => $this->inn,
                 'callback_url' => '',

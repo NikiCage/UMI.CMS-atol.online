@@ -181,7 +181,7 @@ function installUmiDump($dir, $name){
 	<div class="row marketing">
 		<div class="col-lg-6">
 			<div class="col-sm-3">
-				<img src="../images/cms/admin/mac/icons/medium/emarket.png" width="100%" alt="Интернет-магазин"/>
+				<img src="/images/cms/admin/mac/icons/medium/emarket.png" width="100%" alt="Интернет-магазин"/>
 			</div>
 			<div class="col-sm-9">
 				<h4>Интернет-магазин</h4>
@@ -191,7 +191,7 @@ function installUmiDump($dir, $name){
 
 		<div class="col-lg-6">
 			<div class="col-sm-3">
-				<img src="../images/cms/admin/mac/icons/medium/catalog.png" width="100%" alt="Каталог"/>
+				<img src="/images/cms/admin/mac/icons/medium/catalog.png" width="100%" alt="Каталог"/>
 			</div>
 			<div class="col-sm-9">
 				<h4>Каталог</h4>
